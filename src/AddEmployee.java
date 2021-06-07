@@ -22,7 +22,7 @@ public class AddEmployee extends Employee{
         employee7.setSalary(12000);
         listEmployee.addEmployee(employee7);
 
-
+        //hello
         Scanner sc = new Scanner(System.in);
         Employee employee = new Employee();
         System.out.println("Enter name:");
