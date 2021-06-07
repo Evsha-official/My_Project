@@ -1,6 +1,4 @@
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Employee{
     private String name;
@@ -14,6 +12,8 @@ public class Employee{
     private String homeAddress;
     private double salary;
     private LocalDateTime startWorkingDate;
+    private int id = this.setId();
+    private static int counter;
 
     public Employee(){}
 
@@ -115,6 +115,14 @@ public class Employee{
 
     public void setStartWorkingDate(LocalDateTime startWorkingDate) {
         this.startWorkingDate = startWorkingDate;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    private int setId() {
+        return ++counter;
     }
 
     public void print(){
