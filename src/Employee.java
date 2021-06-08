@@ -2,6 +2,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Employee{
     private String name;
@@ -16,7 +17,7 @@ public class Employee{
     private double salary;
     private String startWorkingDate;
     private int id = this.setId();
-    private static int counter;
+    private static int counter = 0;
 
     public Employee(){}
 
@@ -113,7 +114,7 @@ public class Employee{
     }
 
     private int setId() {
-        return ++counter;
+        return counter++;
     }
 
     public void print(){
@@ -127,7 +128,7 @@ public class Employee{
                                 "\nEmail Address - " + emailAddress +
                                 "\nWorking Place Number - " + workingPlaceNumber +
                                 "\nHome Address - " + homeAddress +
-                                "\nSalary - " + salary + "id - " + getId());
+                                "\nSalary - " + salary + " id - " + getId());
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -143,6 +144,32 @@ public class Employee{
         int birthdayYear = date1.getYear() + 1900;
         int age =  date.getYear() - birthdayYear;
         return age;
+    }
+
+    public Employee createEmployee(){
+        Scanner sc = new Scanner(System.in);
+        Employee employee = new Employee();
+        System.out.println("Enter name:");
+        employee.setName(sc.nextLine());
+        System.out.println("Enter surname:");
+        employee.setSurname(sc.nextLine());
+        System.out.println("Enter Middle name:");
+        employee.setMiddleName(sc.nextLine());
+        System.out.println("Enter birthday date:                  Example: 12-12-1987");
+        employee.setBirthdayDate(sc.nextLine());
+        System.out.println("Enter position:");
+        employee.setPosition(sc.nextLine());
+        System.out.println("Enter Phone number:");
+        employee.setPhoneNumber(sc.nextLine());
+        System.out.println("Enter Email address:");
+        employee.setEmailAddress(sc.nextLine());
+        System.out.println("Enter Working place number:");
+        employee.setWorkingPlaceNumber(sc.nextInt());
+        System.out.println("Enter Home Address:");
+        employee.getHomeAddress(sc.next());
+        System.out.println("Enter salary:");
+        employee.setSalary(sc.nextInt());
+        return employee;
     }
 
 //    public int getWorkTime(){

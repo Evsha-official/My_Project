@@ -6,31 +6,31 @@ public class Start {
     public void start() {
 
 
-        Employee employee7 = new Employee();
-        employee7.setName("Pavlo");
-        employee7.setSurname("Evva");
-        employee7.setMiddleName("Evgenovich");
-        employee7.setBirthdayDate("26-08-2001");
-        employee7.setPosition("junior Java Developer");
-        employee7.setPhoneNumber("0505801343");
-        employee7.setEmailAddress("evvapavlous2001@gmail.com");
-        employee7.setWorkingPlaceNumber(5);
-        employee7.setHomeAddress("Troleybusna 17 10");
-        employee7.setSalary(12000);
-        listEmployee.addEmployee(employee7);
-
-        Employee employee8 = new Employee();
-        employee8.setName("Pavlo");
-        employee8.setSurname("Evva");
-        employee8.setMiddleName("Evgenovich");
-        employee8.setBirthdayDate("26-08-2001");
-        employee8.setPosition("junior Java Developer");
-        employee8.setPhoneNumber("0505801343");
-        employee8.setEmailAddress("evvapavlous2001@gmail.com");
-        employee8.setWorkingPlaceNumber(5);
-        employee8.setHomeAddress("Troleybusna 17 10");
-        employee8.setSalary(12000);
-        listEmployee.addEmployee(employee8);
+//        Employee employee7 = new Employee();
+//        employee7.setName("Pavlo");
+//        employee7.setSurname("Evva");
+//        employee7.setMiddleName("Evgenovich");
+//        employee7.setBirthdayDate("26-08-2001");
+//        employee7.setPosition("junior Java Developer");
+//        employee7.setPhoneNumber("0505801343");
+//        employee7.setEmailAddress("evvapavlous2001@gmail.com");
+//        employee7.setWorkingPlaceNumber(5);
+//        employee7.setHomeAddress("Troleybusna 17 10");
+//        employee7.setSalary(12000);
+//        listEmployee.addEmployee(employee7);
+//
+//        Employee employee8 = new Employee();
+//        employee8.setName("Pavlo");
+//        employee8.setSurname("Evva");
+//        employee8.setMiddleName("Evgenovich");
+//        employee8.setBirthdayDate("26-08-2001");
+//        employee8.setPosition("junior Java Developer");
+//        employee8.setPhoneNumber("0505801343");
+//        employee8.setEmailAddress("evvapavlous2001@gmail.com");
+//        employee8.setWorkingPlaceNumber(5);
+//        employee8.setHomeAddress("Troleybusna 17 10");
+//        employee8.setSalary(12000);
+//        listEmployee.addEmployee(employee8);
 
 
 
@@ -53,8 +53,10 @@ public class Start {
                 break;
             case 2:
                 System.out.println("add a new employee");
-                AddEmployee addEmployee = new AddEmployee();
-                addEmployee.AddEmployee(listEmployee);
+                //AddEmployee addEmployee = new AddEmployee();
+                //addEmployee.addEmployee(listEmployee);
+                //Employee employee = new Employee();
+                listEmployee.addEmployee(new AddEmployee().createEmployee());
                 break;
             case 3:
                 System.out.println("delete an existing employee");
@@ -63,6 +65,8 @@ public class Start {
                 break;
             case 4:
                 System.out.println("edit an existing employee");
+                EditEmployee editEmployee = new EditEmployee();
+                editEmployee.EditEmployee(listEmployee);
                 break;
             case 5:
                 System.out.println("Exiting");
