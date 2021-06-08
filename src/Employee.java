@@ -133,6 +133,10 @@ public class Employee{
         }
     }
 
+    public void print2(){
+        System.out.println(name);
+    }
+
     public int getAge() throws ParseException {
         Date date1 = new SimpleDateFormat("dd-MM-yyyy").parse(birthdayDate);
         LocalDate date = LocalDate.now();
