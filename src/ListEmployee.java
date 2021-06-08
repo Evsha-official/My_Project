@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListEmployee{
-    private List<Employee> listEmployee = new ArrayList<>(); // edit to map
+    private List<Employee> listEmployee = new ArrayList<>();
 
     public List<Employee> getListEmployee() {
         return listEmployee;

@@ -1,33 +1,24 @@
-import java.time.LocalDateTime;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Date;
 
 public class Employee{
     private String name;
     private String surname;
     private String middleName;
-    private LocalDateTime birthdayDate; // pattern **.**.**** extend last **** = birthYear;
+    private String birthdayDate;
     private String position;
     private String phoneNumber;
     private String emailAddress;
     private int workingPlaceNumber;
     private String homeAddress;
     private double salary;
-    private LocalDateTime startWorkingDate;
+    private String startWorkingDate;
     private int id = this.setId();
     private static int counter;
 
     public Employee(){}
-
-    public Employee(String name, String surname, String middleName, String position, String phoneNumber, String emailAddress, int numberWorkingPlace, String localAddress, double salary){
-        this.name = name;
-        this.surname = surname;
-        this.middleName = middleName;
-        this.position = position;
-        this.phoneNumber = phoneNumber;
-        this.emailAddress = emailAddress;
-        this.workingPlaceNumber = numberWorkingPlace;
-        this.homeAddress = localAddress;
-        this.salary = salary;
-    }
 
     public String getName() {
         return name;
@@ -53,11 +44,11 @@ public class Employee{
         this.middleName = middleName;
     }
 
-    public LocalDateTime getBirthdayDate() {
+    public String getBirthdayDate() {
         return birthdayDate;
     }
 
-    public void setBirthdayDate(LocalDateTime birthdayDate) {
+    public void setBirthdayDate(String birthdayDate) {
         this.birthdayDate = birthdayDate;
     }
 
@@ -109,11 +100,11 @@ public class Employee{
         this.salary = salary;
     }
 
-    public LocalDateTime getStartWorkingDate() {
+    public String getStartWorkingDate() {
         return startWorkingDate;
     }
 
-    public void setStartWorkingDate(LocalDateTime startWorkingDate) {
+    public void setStartWorkingDate(String startWorkingDate) {
         this.startWorkingDate = startWorkingDate;
     }
 
@@ -126,33 +117,34 @@ public class Employee{
     }
 
     public void print(){
-System.out.println( "\nName - " + name +
-                    "\nSurname - " + surname +
-                    "\nMiddle name - " + middleName +
-                    "\nPosition - " + position +
-                    "\nPhone Number - " + phoneNumber +
-                    "\nEmail Address - " + emailAddress +
-                    "\nWorking Place Number - " + workingPlaceNumber +
-                    "\nHome Address - " + homeAddress +
-                    "\nSalary - " + salary);
+        try {
+            System.out.println( "\nName - " + name +
+                                "\nSurname - " + surname +
+                                "\nMiddle name - " + middleName +
+                                "\nAge - " + getAge() +
+                                "\nPosition - " + position +
+                                "\nPhone Number - " + phoneNumber +
+                                "\nEmail Address - " + emailAddress +
+                                "\nWorking Place Number - " + workingPlaceNumber +
+                                "\nHome Address - " + homeAddress +
+                                "\nSalary - " + salary + "id - " + getId());
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 
-//        private int calculateAge(int dateOfBirthday){
-//        LocalDateTime nowDateObj = LocalDateTime.now();
-//        int age = nowDateObj.getYear() - dateOfBirthday.getYear();
-//        return age;
-//    }
+    public int getAge() throws ParseException {
+        Date date1 = new SimpleDateFormat("dd-MM-yyyy").parse(birthdayDate);
+        LocalDate date = LocalDate.now();
+        int birthdayYear = date1.getYear() + 1900;
+        int age =  date.getYear() - birthdayYear;
+        return age;
+    }
 
-//    public int getAge() {
-//        LocalDate date = LocalDate.now();
-//        return date.getYear() - birthYear;
-//    }
-
-
-//
-//    private  int calculateWorkTime(int dateStartWorking){
+//    public int getWorkTime(){
 //
 //    }
+
 
 
 

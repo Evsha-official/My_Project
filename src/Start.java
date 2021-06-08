@@ -4,27 +4,35 @@ public class Start {
     ListEmployee listEmployee = new ListEmployee();
 
     public void start() {
-//        Employee employee1 = new Employee("Pavlo", "Evva", "Evgenovich", "junior Java Developer", "0505801343", "evvapavlous2001@gmail.com", 5, "Troleybusna 17/10", 12000);
-//        listEmployee.addEmployee(employee1);
-//        Employee employee2 = new Employee("Pavlo", "Evva", "Evgenovich", "junior Java Developer", "0505801343", "evvapavlous2001@gmail.com", 5, "Troleybusna 17/10", 12000);
-//        listEmployee.addEmployee(employee2);
-//        Employee employee3 = new Employee("Pavlo", "Evva", "Evgenovich", "junior Java Developer", "0505801343", "evvapavlous2001@gmail.com", 5, "Troleybusna 17/10", 12000);
-//        listEmployee.addEmployee(employee3);
-//        Employee employee7 = new Employee();
-//        employee7.setName("Pavlo");
-//        employee7.setSurname("Evva");
-//        employee7.setMiddleName("Evgenovich");
-//        employee7.setPosition("junior Java Developer");
-//        employee7.setPhoneNumber("0505801343");
-//        employee7.setEmailAddress("evvapavlous2001@gmail.com");
-//        employee7.setWorkingPlaceNumber(5);
-//        employee7.setHomeAddress("Troleybusna 17 10");
-//        employee7.setSalary(12000);
-//        listEmployee.addEmployee(employee7);
-//
-//
-//
-//
+
+
+        Employee employee7 = new Employee();
+        employee7.setName("Pavlo");
+        employee7.setSurname("Evva");
+        employee7.setMiddleName("Evgenovich");
+        employee7.setBirthdayDate("26-08-2001");
+        employee7.setPosition("junior Java Developer");
+        employee7.setPhoneNumber("0505801343");
+        employee7.setEmailAddress("evvapavlous2001@gmail.com");
+        employee7.setWorkingPlaceNumber(5);
+        employee7.setHomeAddress("Troleybusna 17 10");
+        employee7.setSalary(12000);
+        listEmployee.addEmployee(employee7);
+
+        Employee employee8 = new Employee();
+        employee8.setName("Pavlo");
+        employee8.setSurname("Evva");
+        employee8.setMiddleName("Evgenovich");
+        employee8.setBirthdayDate("26-08-2001");
+        employee8.setPosition("junior Java Developer");
+        employee8.setPhoneNumber("0505801343");
+        employee8.setEmailAddress("evvapavlous2001@gmail.com");
+        employee8.setWorkingPlaceNumber(5);
+        employee8.setHomeAddress("Troleybusna 17 10");
+        employee8.setSalary(12000);
+        listEmployee.addEmployee(employee8);
+
+
 
         Scanner sc = new Scanner(System.in);
         int number;
@@ -50,6 +58,8 @@ public class Start {
                 break;
             case 3:
                 System.out.println("delete an existing employee");
+                DeleteEmployee deleteEmployee = new DeleteEmployee();
+                deleteEmployee.deleteEmployee(listEmployee);
                 break;
             case 4:
                 System.out.println("edit an existing employee");

@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class AddEmployee extends Employee{
-//    private ListEmployee listEmployee = new ListEmployee();
     public void AddEmployee(ListEmployee listEmployee){
         Scanner sc = new Scanner(System.in);
         Employee employee = new Employee();
@@ -11,6 +10,8 @@ public class AddEmployee extends Employee{
         employee.setSurname(sc.nextLine());
         System.out.println("Enter Middle name:");
         employee.setMiddleName(sc.nextLine());
+        System.out.println("Enter birthday date:                  Example: 12-12-1987");
+        employee.setBirthdayDate(sc.nextLine());
         System.out.println("Enter position:");
         employee.setPosition(sc.nextLine());
         System.out.println("Enter Phone number:");
