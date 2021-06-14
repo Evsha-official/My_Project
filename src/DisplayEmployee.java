@@ -8,7 +8,9 @@ public class DisplayEmployee extends Employee{
     }
 
     public void displayEmployee2(List<Employee> listEmployee){
+        int x = 1;
         for (int i = 0; i < listEmployee.size(); i++){
+            System.out.print(x++ + ": ");
             listEmployee.get(i).print2();
         }
     }
