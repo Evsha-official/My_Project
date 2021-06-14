@@ -17,7 +17,7 @@ public class Employee{
     private double salary;
     private String startWorkingDate;
     private int id = this.setId();
-    private static double counter = 0;
+    private static double counter = 1;
 
     public Employee(){}
 
