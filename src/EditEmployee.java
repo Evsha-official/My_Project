@@ -29,7 +29,7 @@ public class EditEmployee extends Employee{
                 String editMiddleName = sc.next();
                 listEmployee.getListEmployee().get(editId -1).setMiddleName(editMiddleName);
                 break;
-            case "Birthday date", "birthday date", "4":
+            case "Birthday date", "birthday date", "Age", "age", "4":
                 System.out.println("Age:");
                 String editAge = sc.next();
                 listEmployee.getListEmployee().get(editId -1).setBirthdayDate(editAge);

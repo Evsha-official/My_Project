@@ -130,7 +130,7 @@ public class Employee{
                                 "\nEmail Address - " + emailAddress +
                                 "\nWorking Place Number - " + workingPlaceNumber +
                                 "\nHome Address - " + homeAddress +
-                                "\nSalary - " + salary + " id - " + getId());
+                                "\nSalary - " + salary + " id:" + id);
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -169,6 +169,7 @@ public class Employee{
         employee.setWorkingPlaceNumber(sc.nextInt());
         System.out.println("Enter Home Address:");
         employee.getHomeAddress(sc.next());
+        employee.getHomeAddress(sc.nextLine());
         System.out.println("Enter salary:");
         employee.setSalary(sc.nextInt());
         return employee;

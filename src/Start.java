@@ -80,7 +80,10 @@ public class Start {
             case 5:
                 System.out.println("Exiting");
                 break;
+            default:
+                System.err.println("incorrect enter");
             }
+
         } while (number != 5);
     }
 }
