@@ -64,7 +64,7 @@ public class Start {
                 displayEmployee.displayEmployee(listEmployee.getListEmployee());
                 break;
             case 2:
-                System.out.println("add a new employee");
+                System.out.println("add a new employee                 if you want exit enter 0");
                 listEmployee.addEmployee(new AddEmployee().createEmployee());
                 break;
             case 3:

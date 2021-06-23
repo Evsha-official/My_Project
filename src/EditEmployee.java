@@ -2,13 +2,15 @@ import java.util.Scanner;
 
 public class EditEmployee extends Employee{
     public void EditEmployee(ListEmployee listEmployee){
-        System.out.println("Which employee you want edit?");
+        System.out.println("Which employee you want edit?                 if you want exit enter 0");
         DisplayEmployee displayEmployee = new DisplayEmployee();
         displayEmployee.displayEmployee2(listEmployee.getListEmployee());
         int editId;
         Scanner sc = new Scanner(System.in);
         editId = sc.nextInt();
-
+        if(editId == 0){
+           return;
+        }
         listEmployee.getListEmployee().get(editId - 1).print();
         System.out.println("\nWhat do you want edit?");
         String edit = sc.next();

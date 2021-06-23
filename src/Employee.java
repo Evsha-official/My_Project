@@ -151,27 +151,70 @@ public class Employee{
     public Employee createEmployee(){
         Scanner sc = new Scanner(System.in);
         Employee employee = new Employee();
-        System.out.println("Enter name:");
-        employee.setName(sc.nextLine());
-        System.out.println("Enter surname:");
-        employee.setSurname(sc.nextLine());
-        System.out.println("Enter Middle name:");
-        employee.setMiddleName(sc.nextLine());
-        System.out.println("Enter birthday date:                  Example: 12-12-1987");
-        employee.setBirthdayDate(sc.nextLine());
-        System.out.println("Enter position:");
-        employee.setPosition(sc.nextLine());
-        System.out.println("Enter Phone number:");
-        employee.setPhoneNumber(sc.nextLine());
-        System.out.println("Enter Email address:");
-        employee.setEmailAddress(sc.nextLine());
-        System.out.println("Enter Working place number:");
-        employee.setWorkingPlaceNumber(sc.nextInt());
-        System.out.println("Enter Home Address:");
-        employee.getHomeAddress(sc.next());
-        employee.getHomeAddress(sc.nextLine());
-        System.out.println("Enter salary:");
-        employee.setSalary(sc.nextInt());
+        String input = null;
+        int inputInt;
+            System.out.println("Enter name:");
+            input = sc.nextLine();
+            if(input.equals("0")){
+                return employee;
+            }
+            employee.setName(input);
+            System.out.println("Enter surname:");
+            input = sc.nextLine();
+            if(input.equals("0")){
+                return employee;
+            }
+            employee.setSurname(input);
+            System.out.println("Enter Middle name:");
+            input = sc.nextLine();
+            if(input.equals("0")){
+                return employee;
+            }
+            employee.setMiddleName(input);
+            System.out.println("Enter birthday date:                  Example: 12-12-1987");
+            input = sc.nextLine();
+            if(input.equals("0")){
+                return employee;
+            }
+            employee.setBirthdayDate(input);
+            System.out.println("Enter position:");
+            input = sc.nextLine();
+            if(input.equals("0")){
+                return employee;
+            }
+            employee.setPosition(input);
+            System.out.println("Enter Phone number:");
+            input = sc.nextLine();
+            if(input.equals("0")){
+                return employee;
+            }
+            employee.setPhoneNumber(input);
+            System.out.println("Enter Email address:");
+            input = sc.nextLine();
+            if(input.equals("0")){
+                return employee;
+            }
+            employee.setEmailAddress(input);
+            System.out.println("Enter Working place number:");
+            inputInt = sc.nextInt();
+            if(inputInt == 0){
+                return employee;
+            }
+            employee.setWorkingPlaceNumber(inputInt);
+            System.out.println("Enter Home Address:");
+            input = sc.nextLine();
+            input = sc.nextLine();
+            if(input.equals("0")){
+                return employee;
+            }
+            employee.setHomeAddress(input);
+            System.out.println("Enter salary:");
+            inputInt = sc.nextInt();
+            if(inputInt == 0){
+                return employee;
+            }
+            employee.setSalary(inputInt);
+
         return employee;
     }
 
