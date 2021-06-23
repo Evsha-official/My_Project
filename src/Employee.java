@@ -3,6 +3,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.Scanner;
+import java.util.UUID;
 
 public class Employee{
     private String name;
@@ -16,8 +17,8 @@ public class Employee{
     private String homeAddress;
     private double salary;
     private String startWorkingDate;
-    private int id = this.setId();
-    private static double counter = 1;
+    private String id = this.setId();
+    //private static double counter = 1;
 
     public Employee(){}
 
@@ -109,14 +110,13 @@ public class Employee{
         this.startWorkingDate = startWorkingDate;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    private int setId() {
-        counter++;
-        counter = counter - 0.5;
-        return (int)counter;
+    private String setId() {
+        String ID = UUID.randomUUID().toString();
+        return ID;
     }
 
     public void print(){
@@ -130,7 +130,7 @@ public class Employee{
                                 "\nEmail Address - " + emailAddress +
                                 "\nWorking Place Number - " + workingPlaceNumber +
                                 "\nHome Address - " + homeAddress +
-                                "\nSalary - " + salary + " id:" + id);
+                                "\nSalary - " + salary);
         } catch (ParseException e) {
             e.printStackTrace();
         }
